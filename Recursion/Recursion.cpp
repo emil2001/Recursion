@@ -6,7 +6,7 @@
 #include <time.h>
 void build(int currl, int* B, int* A)
 {
-	int j = (currl * (currl/2+1)/2);
+	int j = -2+2*currl;
 	int j1 = j + 2 * currl;
 	if (j == 0)
 	{
