@@ -1,0 +1,8 @@
+﻿  Recursion.cpp
+E:\Emil\Programming\Recursion\Recursion\Recursion.cpp(13,14): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+E:\Emil\Programming\Recursion\Recursion\Recursion.cpp(18,14): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+E:\Emil\Programming\Recursion\Recursion\Recursion.cpp(32,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+E:\Emil\Programming\Recursion\Recursion\Recursion.cpp(35,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+E:\Emil\Programming\Recursion\Recursion\Recursion.cpp(38,41): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+E:\Emil\Programming\Recursion\Recursion\Recursion.cpp(30,6): warning C4101: currl: неиспользованная локальная переменная
+  Recursion.vcxproj -> E:\Emil\Programming\Recursion\Debug\Recursion.exe
