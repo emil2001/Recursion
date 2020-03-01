@@ -4,21 +4,34 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
-void build(int currl, int* B, int* A)
+
+void build(int currl, int* B, int* A, int le)
 {
-	int j = -2+2*currl;
+	int j = -2 + 2 * currl;
 	int j1 = j + 2 * currl;
 	if (j == 0)
 	{
 		B[j] = fmax(B[j1], B[j1-1]);
 		return;
 	}
-	for (int k = j; k > j - currl ; k--)
+
+	if (j1 >= le)
 	{
-		B[k] = fmax(B[j1], B[j1 - 1]);
-		j1 -= 2;
+		for (int i = currl - 1; i >= 0; i--)
+		{
+			B[le - i - 1] = A[currl - i - 1];
+		}
 	}
-	build(currl / 2, B, A);
+	else
+	{
+		for (int k = j; k > j - currl; k--)
+		{
+			B[k] = fmax(B[j1], B[j1 - 1]);
+			j1 -= 2;
+		}
+	}
+	
+	build(currl / 2, B, A, le);
 	return;
 	
 }
@@ -39,13 +52,12 @@ int main()
 		printf("%d ", A[i]);
 	}
 	printf("\n");
-	for (int i = k-1; i >= 0; i--)
-	{
-		B[le - i - 1] = A[k - i - 1];
-	}
-	build(k / 2, B, A);
+	
+	build(k, B, A, le);
 	for (int i = 0; i < le; i++)
 	{
 		printf("%d ", B[i]);
 	}
+	free(A);
+	free(B);
 }
